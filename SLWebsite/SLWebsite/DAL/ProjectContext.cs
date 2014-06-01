@@ -14,7 +14,7 @@ namespace SLWebsite.DAL
 
         public ProjectContext() : base("DefaultConnection")
         {
-            
+            System.Data.Entity.Database.SetInitializer(new ProjectInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
